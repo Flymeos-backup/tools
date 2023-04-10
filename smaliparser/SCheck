@@ -2,4 +2,4 @@
 
 SCHECK=`dirname $0`/SCheck.py
 
-python $SCHECK $@
+python2 $SCHECK $@

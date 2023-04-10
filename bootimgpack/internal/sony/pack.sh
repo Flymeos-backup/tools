@@ -57,7 +57,7 @@ function pack_bootimg()
 	cd $DIR_RAMDISK && find . | cpio -o -H newc | gzip > ../$FILE_RAMDISK && cd ..
 
 	# Make kernel-updated.elf
-	python $TOOL_MKELF -o pack.img \
+	python2 $TOOL_MKELF -o pack.img \
 	       $FILE_KERNEL@$FILE_KERNEL_ADDR \
 	       $FILE_RAMDISK@$FILE_RAMDISK_ADDR,ramdisk \
 	       $FILE_RPM@$FILE_RPM_ADDR,rpm \
